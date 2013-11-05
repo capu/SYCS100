@@ -37,7 +37,8 @@ Task 2 - Binary Search: (20 pts)
 
 Task 3 - Submitting to GitHub: (80pts)
   After you submit your project to the course website, you will need to add it to your team's
-  file in GitHub.  First your team must create ONE file (<groupname>bsearch.py). Each team member
+  file in GitHub.  First your team must create ONE file (<groupname>bsearch.py). This file should
+  be added to the directory projects/bsearch. The professor will approve changes. Each team member
   should then add their implementation of a binary search to the file. You should comment your
   code thoroughly. You may need to resolve conflicts in your file. Each teammate that does not 
   submit their code will cost the ENTIRE team 5 points. Each team member needs to create their own GitHub 
