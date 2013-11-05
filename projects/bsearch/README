@@ -1,0 +1,45 @@
+Welcome to your first experience with revision control.
+
+Groups must be formed by 11/7 10PM EST
+Project DUE: 11/17 10PM EST
+
+Links:
+  Our GitHub Project - https://github.com/capu/SYCS100
+  Notes on Git -  http://en.wikipedia.org/wiki/Git_(software)
+  Git Tutorial - http://git-scm.com/docs/gittutorial
+
+
+Tasks: (Details below)
+  1) Form a group of 6 people.  You grade will be affected by your group.
+  2) Individually create a file (bsearch.py) and implement binary search.
+  3) Submit your code to your group file on our class GitHub page.
+
+
+Task 1 - forming a group:
+  Your group should contain at least 6 people. You must write your own code without help from
+  your group members. Each group member will be expected to learn git and contribute to the 
+  team's public file on GitHub. Send one email per group listing the names of everyone in your group
+  to the professor by 11/7 at 10PM EST. Please name your group as well.
+
+
+Task 2 - Binary Search: (20 pts)
+  Implement binary search, submit it to the course website and then add it to your group's
+  public file on GitHub. You must write a function bsearch that takes and list and an element
+  to search for.  This function should return the index of the element if found and -1 otherwise.
+
+  Challenge (not mandatory): Learn about recursion and also write a function bsearchRecursive that 
+                             uses recursion to find the index of the value.
+
+  Important: Due to the public nature of this project I will be watching closely for cheating
+	     within a group and across groups. Any cheating will result in failure for the 
+             ENTIRE group.
+
+
+Task 3 - Submitting to GitHub: (80pts)
+  After you submit your project to the course website, you will need to add it to your team's
+  file in GitHub.  First your team must create ONE file (<groupname>bsearch.py). Each team member
+  should then add their implementation of a binary search to the file. You should comment your
+  code thoroughly. You may need to resolve conflicts in your file. Each teammate that does not 
+  submit their code will cost the ENTIRE team 5 points. Each team member needs to create their own GitHub 
+  account and submit their own code. This group file should also have a comment with the names of
+  every team member.
