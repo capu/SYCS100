@@ -4,5 +4,6 @@
 	Boluwatife Aiki-Raji
 	Hallie Lomax
 	Brittany Miller
-	Eric Walker '''
+	Eric Walker 
+	Chris Quist'''
 
