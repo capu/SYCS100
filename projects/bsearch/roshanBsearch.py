@@ -1,3 +1,11 @@
+'''Hi prof pratt this is team TerrorBytes. The group members are:
+1.Roshan Thapaliya
+2. Prajjwal Dangal
+3. Nischal Baral
+4. Ram Hari Dahal
+5. Gyasi Jordan
+6. Tyriece McGlawn
+7. Jonathan '''
 
 def binary_search(list1,searchitem):
     list1.sort()
