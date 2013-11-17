@@ -54,10 +54,6 @@ def bitSearch(y, s): ##begin bitsearch of y and the search variable
 bitSearch(listA, 8) ##runs the bit search when y = listA and s = 8
 
 
-
-
-
-
 # Chris Quist's binary search
 def bsearch(wlist, item):
     beginning=0
@@ -74,3 +70,21 @@ def bsearch(wlist, item):
             else:
                 beginning = middle
     return -1
+
+# Errol Grannum's binary search
+MyList = [1,4,10,13,14,15,19,29,36]
+Target = 13
+ # iterative implementation
+def BinarySearch(MyList,Target):
+    low = 0
+    high = len(MyList)
+    while low < high:
+        mid = (low + high)//2
+        if Target > MyList[mid]:
+            low = mid + 1
+        elif Target < MyList[mid]:
+            high = mid
+        else: 
+            return mid
+    return "Number Not Found"
+print BinarySearch(MyList,Target)
