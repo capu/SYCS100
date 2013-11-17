@@ -59,7 +59,7 @@ def bsearch(listm,element):
         elif midvalue > element:     #if the value is greater than the wanted value the function will search lower along the list.
             Hi = mid
         elif midvalue == element:
-                return mid   #Once mid equals the wanted value the function will return it.
+            return mid               #Once mid equals the wanted value the function will return it.
         else:
             return -1
 
