@@ -4,7 +4,8 @@
 	Boluwatife Aiki-Raji
 	Hallie Lomax
 	Brittany Miller
-	Eric Walker '''
+	Eric Walker 
+	Chris Quist'''
 
 ##Eric Walker
 listA= [-1, 2, 3, 4, 555, 1, 2, 3, 4]  ##creates an initial list
