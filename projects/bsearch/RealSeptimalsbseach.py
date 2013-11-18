@@ -123,5 +123,24 @@ def bsearch(listt,e):
 
 
 
+#Lena's bsearch 
 
-
+def bsearch(list, element):             
+    if len(list) != 0:                    
+        first = 0                   
+        last = len(list)-1              
+        found = False                      
+        while not found:                 
+            midpoint = (first + last)/2        
+            if (first==last) and (element != list[first]):             
+                return -1                                 
+            elif element < list[midpoint]:             
+                last = midpoint - 1                  
+            elif element > list[midpoint]:              
+                first = midpoint + 1                 
+            else:                                      
+                found = True                       
+                return midpoint     
+    else:                           
+   
+        return -1
