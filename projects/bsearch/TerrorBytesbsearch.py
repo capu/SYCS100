@@ -141,8 +141,8 @@ def bsearch(list, element):
  
  # Ram Hari Dahal
  
- def bsearch(myList, searchElement):
-        myList.sort()
+ def bsearch(myList, searchElement):  # declaration statement with a function name "bsearch" and parameters myList(which takes the list and searchElement(which takes the element to search).
+        myList.sort()               # sorting the list if not already sorted.
         myLength = len(myList)
         firstInd = 0
         lastInd = myLength - 1
@@ -153,16 +153,16 @@ def bsearch(list, element):
         while firstInd <= lastInd:
                 half = (firstInd + lastInd)/ 2
                 
-                if myList[half]== searchElement:
+                if myList[half]== searchElement: # checking if the element in the middle of the list is the element we are searching for.
                         return half
 
-                if half == 0:
+                if half == 0: # checking if there is only one lement in the list
                         if myList[half] == searchElement:
                                 return half
                 
-                elif myList[half] > searchElement:
+                elif myList[half] > searchElement: # checking if the searchElement lies below the middle element in the list
                         lastInd = half
-                elif myList[half] < searchElement:
+                elif myList[half] < searchElement: # checking if the searchElement lies above the middle element in the list
                         firstInd = half + 1
         
                 else:
