@@ -7,40 +7,33 @@
 6. Tyriece McGlawn
 7. Jonathon Moody '''
 
-"Roshan's solution still in trial phase"
-def binary_search(list1,searchitem):
-    list1.sort()
-    length=len(list1)
-    mid=length/2
-    
-    
-    for i in range (length):
-        if mid>len(list1) or mid<0:
-            return False
-        if mid==0:
-            if list1[0]==searchitem:
-                return True
-            else:
-                return False
-            
-        
-        if list1[mid]==searchitem:
-            return True
-        elif list1[mid]<searchitem:
-            mid=mid+(mid/2)
+"Roshan's final solution"
+
+'doing binary search on list1'
+'defining the function with parameters list1 and searchelement'
+'sorting the list in ascending order'
+'finding the length of the list'
+'finding max boundary when searching the list'
+'finding min boundary when seaching the list'
+'initializing the loop. It ends when minimum boundary is less than or equal to maximum boundary'
+'finding search position'
+'inside the loop there are conditions to check if searchelement is found or which side of searchposition it is in. Here we also update the new searchposition'
+
+def binary_search(list1,searchelement): 
+    list1.sort()                        
+    length=len(list1)                   
+    max_val=length-1                    
+    min_val=0                           
+    while min_val<=max_val:             
+        mid=(max_val+min_val)/2         
+
+        if list1[mid]==searchelement:   
+            return mid
+        elif searchelement>list1[mid]:
+            min_val=mid+1
         else:
-            mid=mid-(mid/2)
-
-    
-    
-    return False
-    
-
-        
-
-
-
-print binary_search([1,2,3],3)
+            max_val=mid-1
+    return -1
 
 
     
