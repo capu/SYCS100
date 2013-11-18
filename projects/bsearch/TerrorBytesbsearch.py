@@ -1,11 +1,11 @@
-#Hi prof pratt this is team TerrorBytes. The group members are:
-#1.Roshan Thapaliya
-#2. Prajjwal Dangal
-#3. Nischal Baral
-#4. Ram Hari Dahal
-#5. Gyasi Jordan
-#6. Tyriece McGlawn
-#7. Jonathon Moody
+'''Hi prof pratt this is team TerrorBytes. The group members are:
+1.Roshan Thapaliya
+2. Prajjwal Dangal
+3. Nischal Baral
+4. Ram Hari Dahal
+5. Gyasi Jordan
+6. Tyriece McGlawn
+7. Jonathon Moody '''
 
 #Roshan Thapaliya
 
@@ -56,6 +56,11 @@ def bsearch(listm,element):
             return mid               #Once mid equals the wanted value the function will return it.
         else:
             return -1
+
+
+a = [1,3,2,4,6,7,8,9]
+
+print bsearch(a,4)
 
 
 
@@ -168,6 +173,23 @@ def bsearch(list, element):
 
 print bsearch([1,2, 4, 3, 5, 6, 7, 8, 9], 9)
 
+#Tyriece McGlawn
 
+def bSearch(theList, t):
+     min = 0 
+     max = len(theList) - 1
+     while 1:
+        if max < min:        #if the max value is less than the min then return -1 and assign m to a new value
+            return -1
+        m = (min + max) / 2
+        if theList[m] < t:   #if the index m in theList is less than the parameter t, then assign min to a new value
+            min = m + 1
+        elif theList[m] > t: #if the index m in theList is greater than the parameter t, then assign max to a new value
+            max = m - 1
+        else:
+            return m         #else the function will return the new value for m
+theList = [1,2,3,4,5]
+t = 3
+print bSearch(theList, t)   #print the value
 
 
