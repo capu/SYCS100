@@ -62,26 +62,3 @@ a = [1,3,2,4,6,7,8,9]
 
 print bsearch(a,4)
 
-
-
-#Gyasi Jordan
-def bsearch(listx,searchval):    
-    listx.sort()
-    cutvar = len(listx)/2
-    midvalue = listx[cutvar]
-    currentlist = listx
-    while searchval != midvalue:
-        if len(currentlist) == 1:
-            if currentlist[0] == searchval:
-                return midvalue
-            else:
-                return None
-        if currentlist[cutvar] > searchval:
-            currentlist = currentlist[0:cutvar]
-        else:
-            currentlist = currentlist[cutvar+1:len(currentlist)]
-        cutvar = len(currentlist)/2
-        midvalue = currentlist[cutvar]
-    return midvalue     
-
-print bsearch([1,2,3,4,5],4)
