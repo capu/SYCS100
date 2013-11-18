@@ -54,7 +54,22 @@ def search(item,numbers):
 
 
 
+#Courtney Gaines
 
+def bsearch(listt,e):
+    start = 0
+    end = len(listt)-1
+    mid = (start + end) /2
+    while (e != mid and start<end):
+        if e < listt[mid]:  
+            end = mid-1
+            mid = (start + end)/2
+        elif e> listt[mid]: 
+            start = mid + 1
+            mid = (start + end) /2
+        else:
+            return mid 
+    return -1  
 
 
 
