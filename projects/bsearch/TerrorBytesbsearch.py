@@ -79,7 +79,7 @@ def bsearch(listx,searchval):
         midvalue = currentlist[cutvar]
     return midvalue     
 
-
+print bsearch([1,2,3,4,5],4)
 
 
 
@@ -167,7 +167,9 @@ def bsearch(list, element):
         
                 else:
                         return -1
-                
+       
+       
+print bsearch([1,2, 4, 3, 5, 6, 7, 8, 9], 9)         
 
 #Tyriece McGlawn
 
@@ -185,5 +187,7 @@ def bsearch(theList, t):
         else:
             return m
 
-
+theList = [1,2,3,4,5]
+t = 4
+print bsearch(theList, t)
 
