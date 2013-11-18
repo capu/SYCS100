@@ -7,7 +7,7 @@
 6. Tyriece McGlawn
 7. Jonathon Moody '''
 
-#Roshan Thapaliya
+"Roshan's final solution"
 
 'doing binary search on list1'
 'defining the function with parameters list1 and searchelement'
@@ -85,3 +85,26 @@ def bsearch(listx,searchval):
     return midvalue     
 
 print bsearch([1,2,3,4,5],4)
+
+
+
+
+#Tyriece McGlawn
+
+
+def bSearch(theList, t):
+    min = 0 
+    max = len(theList) - 1
+    while 1:
+        if max < min:        #if the max value is less than the min then return -1 and assign m to a new value
+            return -1
+        m = (min + max) / 2
+        if theList[m] < t:   #if the index m in theList is less than the parameter t, then assign min to a new value
+            min = m + 1
+        elif theList[m] > t: #if the index m in theList is greater than the parameter t, then assign max to a new value
+            max = m - 1
+        else:
+            return m         #else the function will return the new value for m
+theList = [1,2,3,4,5]
+t = 3
+print bSearch(theList, t)   #print the value
