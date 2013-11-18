@@ -72,8 +72,8 @@ def bsearch(wlist, item):
     return -1
 
 # Errol Grannum's binary search
-MyList = [1,4,10,13,14,15,19,29,36]
-Target = 13
+#MyList = [1,4,10,13,14,15,19,29,36]
+#Target = 13
  # iterative implementation
 def BinarySearch(MyList,Target):
     low = 0
@@ -87,4 +87,4 @@ def BinarySearch(MyList,Target):
         else: 
             return mid
     return "Number Not Found"
-print BinarySearch(MyList,Target)
+#print BinarySearch(MyList,Target)
