@@ -146,6 +146,9 @@ def bsearch(list, element):
         myLength = len(myList)
         firstInd = 0
         lastInd = myLength - 1
+        
+        if myLength == 0 or myList == []: # checking for empty list 
+                return -1
 
         while firstInd <= lastInd:
                 half = (firstInd + lastInd)/ 2
