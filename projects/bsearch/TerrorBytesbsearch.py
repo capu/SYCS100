@@ -156,7 +156,7 @@ def bsearch(list, element):
                 if myList[half]== searchElement: # checking if the element in the middle of the list is the element we are searching for.
                         return half
 
-                if half == 0: # checking if there is only one lement in the list
+                if half == 0: # checking if there is only one element in the list
                         if myList[half] == searchElement:
                                 return half
                 
