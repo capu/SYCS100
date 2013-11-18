@@ -172,6 +172,25 @@ def bsearch(list, element):
 
 print bsearch([1,2, 4, 3, 5, 6, 7, 8, 9], 9)
 
+#Tyriece McGlawn
 
+def bsearch(theList, t):
+    min = 0
+    max = len(theList) - 1
+    while 1:
+        if max < min:    #if the max value is less than the min then return -1 and assign m to a new value
+            return -1
+        m = (min + max) / 2
+        if theList[m] < t:
+            min = m + 1
+        elif theList[m] > t: #if the index m in theList is greater than the parameter t, then assign max to a new value
+            max = m - 1
+        else:
+            return m
+
+theList = [1,2,3,4,5]
+t = 4
+
+print bsearch(theList, t)
 
 
