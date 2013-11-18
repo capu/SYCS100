@@ -7,7 +7,7 @@
 6. Tyriece McGlawn
 7. Jonathon Moody '''
 
-"Roshan's final solution"
+#Roshan Thapaliya
 
 'doing binary search on list1'
 'defining the function with parameters list1 and searchelement'
@@ -88,23 +88,39 @@ print bsearch([1,2,3,4,5],4)
 
 
 
+#PRAJJWAL DANGAL, email: prajjwal.dangal@bison.howard.edu
 
-#Tyriece McGlawn
+#defining a function that takes a list and an element whose index we want to find as its parameters.
 
+def bsearch(thelist, element):
 
-def bSearch(theList, t):
-    min = 0 
-    max = len(theList) - 1
-    while 1:
-        if max < min:        #if the max value is less than the min then return -1 and assign m to a new value
-            return -1
-        m = (min + max) / 2
-        if theList[m] < t:   #if the index m in theList is less than the parameter t, then assign min to a new value
-            min = m + 1
-        elif theList[m] > t: #if the index m in theList is greater than the parameter t, then assign max to a new value
-            max = m - 1
+    #checking for empty list and list with only one element in it.
+
+    if thelist == []:
+        return -1
+    if len(thelist) == 1 and element == thelist[0]:
+        return 0
+
+    thelist.sort()
+    lengthlist = len(thelist)
+    index = int(lengthlist/2)
+
+    #remember is a variable that serves, along with index, the function of defining the maximum and minimum index between which the element should appear. 
+    remember = lengthlist
+
+    #for loop that runs over and over until we get the index of the element we are searching for in the list or until we return -1 if the element isn't there.
+
+    for i in range (0, (lengthlist)):
+        if element == thelist[index]:
+            return index
+        elif element < thelist[index]:
+            #for this condition we only want to keep on cutting the index by half.
+            remember = index
+            index = index/2
         else:
-            return m         #else the function will return the new value for m
-theList = [1,2,3,4,5]
-t = 3
-print bSearch(theList, t)   #print the value
+            #for this condition we only want to assign index the average value of index and remember.
+            index = (remember + index)/2
+    if not index:
+        return -1
+
+
