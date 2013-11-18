@@ -88,3 +88,42 @@ def BinarySearch(MyList,Target):
             return mid
     return "Number Not Found"
 #print BinarySearch(MyList,Target)
+
+#Hallie Lomax's Binary Search
+
+# Above is my list
+def bsearch(list, b): # Function takes the parameters list and 'b' (the object to find)
+   i = 0 # Setting i to zero and search to an empty list
+   search = []
+   while i < len(list): # creates a list of the numbers associated with the position of each piece of the searchable list
+     search.append(i)
+     i+=1
+   if not list: 
+     return -1
+   while (not search is False): # Keeps looping until the list is empty
+     i = len(search) - 1 # Resets i to being the length of the current list
+     if list[search[0]] == b:
+       return search[0]
+     elif list[search[i]] < b or b < list[search[0]]: # if the thing you're looking for is bigger or smaller than the list that the function is looking at, then its probably not there. So it returns -1 and quits
+       return -1
+     elif list[search[i]] == b: #if the last position in the list is b, then returns the number at that corresponding position in search
+       return search[i]
+     else: # if none of the above apply, it'll cut the list in the following way
+       i /= 2 #Cuts i in half
+       if (i == 0): #if i is zero, then we probably only have one more place to search.
+         if list[search[i]] == b:
+           return search[0]
+         else:
+           return -1
+       elif list[search[i]] == b: # if the list search at i is b, then we return search position i
+         return search[i]
+         
+       else: # if it isn't b:
+         if b > list[search[i]]: # if the list search at position i is less than b, then the search is cut to being the remaining numbers to the right of i
+           search = search[i+1:]
+         elif b < list[search[i]]: # if the list search at position i is greater than b, then the search is cut to being the remaining numbers to the left of i
+           search = search[:i+1]
+   else: #if it gets through the entire list and didn't find anything, then you can have a -1
+     return -1
+     
+bsearch(list,b)
