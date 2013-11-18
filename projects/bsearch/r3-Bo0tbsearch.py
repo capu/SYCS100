@@ -128,27 +128,26 @@ def bsearch(list, b): # Function takes the parameters list and 'b' (the object t
      
 bsearch(list,b)
 
-''' Barry's Binary Search Function '''
+'''Barry's Binary Search Function '''
 def bsearch(l, s):
- 	found = False #Our indicator to exit the funciton and also tell us if the value was found
-	startSearchParameter = 0
-	endSearchParameter = len(l) - 1
-	searchValue = s
-	middleValue = None # MiddleValue has no value initially
-	while (not found) and (startSearchParameter <= endSearchParameter: # We will iterate either until we find the value or we reach the end of the list indicated by the startSearchParameter equalling the endSearchParameter
-		middleValue = ((startSearchParameter+endSearchParameter)/2)
-		if searchValue == l[middleValue]:
-			found = True # Our indicator that we have "found" the searchValue
-		else:  
-			if searchValue < l[middleValue]:
-				endSearchParameter = middleValue - 1
-			else:
-				startSearchParameter = middleValue + 1
- 	if not found: # Test to see if the value was found, if not found will have a value of False
- 		return -1
- 	else: # Will return middleValue if found is True
- 		return middleValue
- ''' End of Barry's Binary Search Function '''
+        found = False #Our indicator to exit the funciton and also tell us if the value was found
+        startSearchParameter = 0
+        endSearchParameter = len(l) - 1
+        searchValue = s
+        middleValue = None # MiddleValue has no value initially
+        while (not found) and (startSearchParameter <= endSearchParameter): # We will iterate either until we find the value or we reach the end of the list indicated by the startSearchParameter equalling the endSearchParameter
+                middleValue = ((startSearchParameter+endSearchParameter)/2)
+                if searchValue == l[middleValue]:
+                        found = True # Our indicator that we have "found" the searchValue
+                else:
+                        if searchValue < l[middleValue]:
+                                endSearchParameter = middleValue - 1
+                        else:
+                                startSearchParameter = middleValue + 1
+        if not found: # Test to see if the value was found, if not found will have a value of False
+                 return -1
+        else: # Will return middleValue if found is True
+                 return middleValue
 
 
 #Brittany Miller's binary search function
