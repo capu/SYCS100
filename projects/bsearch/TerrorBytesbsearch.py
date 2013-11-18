@@ -122,5 +122,24 @@ def bsearch(thelist, element):
             index = (remember + index)/2
     if not index:
         return -1
+# Nischal Baral
+
+def bsearch(list, element):
+ list.sort()
+ length = len(list)
+ N = length - 1
+ size = 1
+ if element==list[0]:  return 0
+ if element==list[N-1]:  return N-1
+ while N > 0 and N < length:
+  if element == list[N]:
+   return N
+  elif element < list[N]:
+   N = N- (length+1)//(2**size)
+   size += 1
+  elif element > list[N]:
+   N= N + (length+1)//(2**size)
+   size += 1
+ return -1
 
 
