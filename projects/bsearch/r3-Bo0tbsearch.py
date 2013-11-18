@@ -148,4 +148,22 @@ def bsearch(l, s):
  		return -1
  	else: # Will return middleValue if found is True
  		return middleValue
- ''' End of Barry's Binary Search Function 
+ ''' End of Barry's Binary Search Function '''
+
+
+#Brittany Miller's binary search function
+
+def bsearch(search_list, list_element):
+    size=len(search_list)-1
+    middle_point = size/2
+    list_len=len(search_list)
+    while size>0:
+            if list_element == search_list[middle_point]:
+                return middle_point
+            elif list_element < search_list[middle_point]:
+                middle_point = middle_point/2
+                size-=1
+            elif list_element < search_list[middle_point]:
+                middle_point =(middle_point + list_len)/2
+                size-=1
+    return -1
