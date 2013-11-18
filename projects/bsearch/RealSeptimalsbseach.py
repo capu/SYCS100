@@ -53,6 +53,37 @@ def search(item,numbers):
 
 
 
+def bsearch_attiyah (searchList, element):
+    first = 0 
+    last = len(searchList) - 1    
+    midPoint = (first + last) / 2       
+    found = False    
+    
+    
+
+    while found == False and first <= last:   
+        
+        if element > searchList[midPoint]:      
+            first = midPoint + 1               
+            midPoint = (first + last) /2        
+            found = False                       
+
+        elif element < searchList[midPoint]:    
+            last = midPoint - 1                 
+            midPoint = (first + last) / 2       
+            found = False                       
+
+        elif element == searchList[midPoint]:   
+            found = True                        
+
+    if found == False:                         
+        return -1
+
+    
+    return midPoint                             
+
+
+
 
 
 
