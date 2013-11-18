@@ -7,6 +7,7 @@
 6. Tyriece McGlawn
 7. Jonathon Moody '''
 
+"Roshan's solution still in trial phase"
 def binary_search(list1,searchitem):
     list1.sort()
     length=len(list1)
