@@ -9,15 +9,15 @@
 
 #Roshan Thapaliya
 
-'doing binary search on list1'
-'defining the function with parameters list1 and searchelement'
-'sorting the list in ascending order'
-'finding the length of the list'
-'finding max boundary when searching the list'
-'finding min boundary when seaching the list'
-'initializing the loop. It ends when minimum boundary is less than or equal to maximum boundary'
-'finding search position'
-'inside the loop there are conditions to check if searchelement is found or which side of searchposition it is in. Here we also update the new searchposition'
+# 'doing binary search on list1'
+# 'defining the function with parameters list1 and searchelement'
+# 'sorting the list in ascending order'
+# 'finding the length of the list'
+# 'finding max boundary when searching the list'
+# 'finding min boundary when seaching the list'
+# 'initializing the loop. It ends when minimum boundary is less than or equal to maximum boundary'
+# 'finding search position'
+# 'inside the loop there are conditions to check if searchelement is found or which side of searchposition it is in. Here we also update the new searchposition'
 
 def binary_search(list1,searchelement): 
     list1.sort()                        
@@ -79,7 +79,7 @@ def bsearch(listx,searchval):
         midvalue = currentlist[cutvar]
     return midvalue     
 
-print bsearch([1,2,3,4,5],4)
+
 
 
 
@@ -169,9 +169,6 @@ def bsearch(list, element):
                         return -1
                 
 
-
-print bsearch([1,2, 4, 3, 5, 6, 7, 8, 9], 9)
-
 #Tyriece McGlawn
 
 def bsearch(theList, t):
@@ -188,9 +185,5 @@ def bsearch(theList, t):
         else:
             return m
 
-theList = [1,2,3,4,5]
-t = 4
-
-print bsearch(theList, t)
 
 
