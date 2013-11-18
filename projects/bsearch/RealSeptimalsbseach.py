@@ -50,7 +50,26 @@ def search(item,numbers):
                         return scope                                            # return correct index
 
 
-
+def bsearch (List, element):
+    bottom = 0
+    top = len(List)-1
+    if len(List)== 0:
+        return -1
+    elif len(List)!= 0:
+        if element <= List[top] and element >= List[0]:
+            
+                while top >= bottom:
+                    middle = (bottom+top)//2
+                    if element == List[middle]:
+                        return middle
+                    elif element > List[middle]:
+                        bottom = middle + 1
+                    elif element < List[middle]:
+                        top = middle - 1
+        else:
+            return str(-1) + " Your element was not found in the list, sorry try again...."
+            
+ 
 
 
 
