@@ -22,3 +22,19 @@ def bsearch (element, alist):               #Defines the function bsearch for a 
                 elif element == alist[MidPoint]:        #Conditional statement to be executed if neither of the previos two conditions return True.
                         return MidPoint                       #Exits the function 'bsearch' and returns the value of midpoint after any number of iterations. 
         return -1                                 #if the condition of the loop is not satisfied that startpoint is not equal to endpoint -1 or if no condition within the loop is satisfied then -1 is returned and the function is exited. 
+
+
+#Johnathan Curry
+def bsearch(item, myList): #defines the function
+	midpoint = len(myList) / 2 #establishes the value of the midpoint
+	left = range(0, midpoint) #tells initially what the first half of the list will be
+	right = range(midpoint, len(myList)-1) #tells what the second half will be
+	while left and right != 0: #establishes the perameters of the loop
+		if midpoint == myList[item]: #if the midpoint is equal to the desired element...
+			return 1 #it will exit the loop and skip to the end
+		elif midpoint < myList[item]: #if the midpoint is less than the desired element...
+			midpoint = len(left) / 2 #there will be a new midpoint based on the first half of the list, and the loop will repeat
+		elif midpoint > myList[item]: #if the midpoint is greater than the desired element...
+			midpoint = len(right) / 2 #there will be a new midpoint based on the second half of the list, and the loop will repeat
+		else: #if none of these are satisfied, that means the desired element does not exist
+			return -1 #and the program will exit the loop
