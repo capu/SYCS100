@@ -7,7 +7,7 @@
 6. Tyriece McGlawn
 7. Jonathon Moody '''
 
-"Roshan's final solution"
+#Roshan Thapaliya
 
 'doing binary search on list1'
 'defining the function with parameters list1 and searchelement'
