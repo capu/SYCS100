@@ -144,3 +144,21 @@ def bsearch(list, element):
     else:                           
    
         return -1
+
+
+#Sarah Jones
+def bsearch( lista, element):
+    start = 0
+    end = len(lista) - 1
+    while (end >= start):
+          mid = (start + end) / 2
+          if (lista[mid] < element):
+            start = mid + 1
+          elif lista[mid] > element:
+            end = mid - 1
+          else:
+            return mid
+            
+        
+    return -1
+
