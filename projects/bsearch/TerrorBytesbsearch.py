@@ -1,11 +1,11 @@
-'''Hi prof pratt this is team TerrorBytes. The group members are:
-1.Roshan Thapaliya
-2. Prajjwal Dangal
-3. Nischal Baral
-4. Ram Hari Dahal
-5. Gyasi Jordan
-6. Tyriece McGlawn
-7. Jonathon Moody '''
+#Hi prof pratt this is team TerrorBytes. The group members are:
+#1.Roshan Thapaliya
+#2. Prajjwal Dangal
+#3. Nischal Baral
+#4. Ram Hari Dahal
+#5. Gyasi Jordan
+#6. Tyriece McGlawn
+#7. Jonathon Moody
 
 #Roshan Thapaliya
 
@@ -56,11 +56,6 @@ def bsearch(listm,element):
             return mid               #Once mid equals the wanted value the function will return it.
         else:
             return -1
-
-
-a = [1,3,2,4,6,7,8,9]
-
-print bsearch(a,4)
 
 
 
