@@ -183,7 +183,3 @@ def bsearch(theList, t):
         else:
             return m
 
-theList = [1,2,3,4,5]
-t = 4
-bsearch(theList, t)
-
