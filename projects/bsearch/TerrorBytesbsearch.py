@@ -187,5 +187,5 @@ def bsearch(theList, t):
 
 theList = [1,2,3,4,5]
 t = 4
-print bsearch(theList, t)
+bsearch(theList, t)
 
