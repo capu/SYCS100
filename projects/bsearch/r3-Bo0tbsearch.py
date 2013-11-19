@@ -166,3 +166,18 @@ def bsearch(search_list, list_element):
                 middle_point =(middle_point + list_len)/2
                 size-=1
     return -1
+    
+#Boluwatife Aiki-Raji's Binary search
+def bsearch (givenlist,element):
+	start = 0
+	end = len(givenlist)
+	while start < end:
+		midpoint = (start+end)/2
+		if element < givenlist[midpoint]:
+			end = midpoint 
+		elif element > givenlist[midpoint]:
+			start = midpoint + 1
+		else:
+			return midpoint
+	return -1
+#Bolu's Binary Search
