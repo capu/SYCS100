@@ -26,18 +26,19 @@ def bsearch (element, alist):               #Defines the function bsearch for a 
 
 #Johnathan Curry
 def bsearch(item, myList): #defines the function
-	midpoint = len(myList) / 2 #establishes the value of the midpoint
-	left = range(0, midpoint) #tells initially what the first half of the list will be
-	right = range(midpoint, len(myList)-1) #tells what the second half will be
-	while left and right != 0: #establishes the perameters of the loop
-		if midpoint == myList[item]: #if the midpoint is equal to the desired element...
-			return 1 #it will exit the loop and skip to the end
-		elif midpoint < myList[item]: #if the midpoint is less than the desired element...
-			midpoint = len(left) / 2 #there will be a new midpoint based on the first half of the list, and the loop will repeat
-		elif midpoint > myList[item]: #if the midpoint is greater than the desired element...
-			midpoint = len(right) / 2 #there will be a new midpoint based on the second half of the list, and the loop will repeat
-		else: #if none of these are satisfied, that means the desired element does not exist
-			return -1 #and the program will exit the loop
+	left = myList[0] #tells initially what the first half of the list will be (the first element)
+	right = myList[-1] #tells what the second half will be (the final element)
+	midpoint = (left + right) / 2 #establishes the value of the midpoint 
+	while found = False: #establishes the perameter of the loop. The loop will exit when found = true
+		if item < midpoint: #if the midpoint is less than the desired element...
+			midpoint = (left + midpoint) / 2 #the new midpoint will be half the first half of the list
+		elif item > midpoint: #if the midpoint is greater than the desired element...
+			midpoint = (right + midpoint) / 2 #the new midpoint will be half the second half of the list
+		elif item == midpoint: #if the midpoint is equal to the desired element...	
+			found =True #found will equal true when item is found, exiting the loop
+			return myList[item] #it will exit the loop and skip to the end
+		else: #if all else fails...
+			return -1 # -1 will be returned if the item is not in the list at all
 
 #Jordan Marsaw 
 ''' The function takes a (L)ist and a (S)earch element and then makes takes the highest value as the last possible 
