@@ -86,7 +86,7 @@ def BinarySearch(MyList,Target):
             high = mid
         else: 
             return mid
-    return "Number Not Found"
+    return -1
 #print BinarySearch(MyList,Target)
 
 #Hallie Lomax's Binary Search
