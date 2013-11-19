@@ -170,6 +170,7 @@ def bsearch(list, element):
 #Tyriece McGlawn
 
 def bsearch(theList, t):
+    theList.sort()
     min = 0
     max = len(theList) - 1
     while 1:
