@@ -67,7 +67,7 @@ def bsearch (List, element):
                     elif element < List[middle]:
                         top = middle - 1
         else:
-            return str(-1) + " Your element was not found in the list, sorry try again...."
+            return -1
             
  
 
