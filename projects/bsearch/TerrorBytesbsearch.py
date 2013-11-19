@@ -19,7 +19,7 @@
 # 'finding search position'
 # 'inside the loop there are conditions to check if searchelement is found or which side of searchposition it is in. Here we also update the new searchposition'
 
-def binary_search(list1,searchelement): 
+def bsearch(list1,searchelement): 
     list1.sort()                        
     length=len(list1)                   
     max_val=length-1                    
