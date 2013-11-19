@@ -141,7 +141,7 @@ def bsearch(list, element):
  
  # Ram Hari Dahal
  
- def bsearch(myList, searchElement):  # declaration statement with a function name "bsearch" and parameters myList(which takes the list and searchElement(which takes the element to search).
+ def bsearch(myList, searchElement):  # declaration statement with a function name "bsearch" and parameters myList(which takes the list) and searchElement(which takes the element to search).
         myList.sort()               # sorting the list if not already sorted.
         myLength = len(myList)
         firstInd = 0
