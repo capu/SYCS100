@@ -185,5 +185,40 @@ def bsearch( lista, element):
             
         
     return -1
+    
+#Contee Cameron's Search 
+
+def  bsearch(ist, item):
+  
+  if len(ist) == 0:
+      
+      return -1
+
+    low = 0
+
+    up = len(ist)-1
+    
+
+    while low <= up:
+            
+        mid= (low + up) / 2
+        
+        
+        if ist[mid] < item:
+
+            low = mid +1
+            
+
+        elif ist[mid] > item:
+
+            up = mid - 1
+            
+
+        elif ist[mid] == item: 
+    
+            return mid
+
+        else:
+            return -1
 
 # Jabari's Code
