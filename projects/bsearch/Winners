@@ -1,4 +1,4 @@
-list=[22,36,43,55,64,77,80,88]
+
 
 def bsearch(list,searchvalue):
     
@@ -16,4 +16,22 @@ def bsearch(list,searchvalue):
         else:
             return mid
     return-1
-print bsearch (list,77) 
+
+
+def bsearch(numbers,value):
+    
+    low=0
+    high=len(numbers)-1
+    mid=0
+    while low <=high:
+        mid=(low + high)/2
+        item=numbers[mid]
+        
+        if item < value:
+            low=mid+1
+        elif item > value:
+            high=mid-1
+        else:
+            return mid
+    return -1
+
