@@ -152,23 +152,20 @@ def bsearch(list, element):
 
         while firstInd <= lastInd:
                 half = (firstInd + lastInd)/ 2
-                
-                if myList[half]== searchElement: # checking if the element in the middle of the list is the element we are searching for.
+
+                                
+                if myList[half]== searchElement:
                         return half
 
-                if half == 0: # checking if there is only one element in the list
-                        if myList[half] == searchElement:
-                                return half
-                
-                elif myList[half] > searchElement: # checking if the searchElement lies below the middle element in the list
+                elif myList[half] > searchElement:
                         lastInd = half
-                        half = (firstInd + lastInd)/2
-                elif myList[half] < searchElement: # checking if the searchElement lies above the middle element in the list
+                        half= (firstInd + lastInd)/2
+                elif myList[half] < searchElement:
                         firstInd = half + 1
-                        half = (firstInd + lastInd)/2
+                        half= (firstInd + lastInd)/2
+                        
         
-                return -1
-       
+        return -1
        
 #Tyriece McGlawn
 
