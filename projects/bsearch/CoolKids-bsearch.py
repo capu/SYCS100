@@ -27,30 +27,22 @@ Solutions:
 #       else:
 #          high = testpos-1
 #Glenisha Smith @02679391
-# November 17, 2013
-# SYCS 100
-# Binary Search
-
-
-
-def bsearch(myItem, myList):
-	found = False
-	low = 0
-	high = len(myList)-1
-	while low <= high and not found:
-		mid = (low + high)//2
-		if myList[mid]== myItem:
-			found = True
-		elif myList[mid] < myItem:
-			low = mid + 1
+def bsearch(myList, myItem):
+	low = 0 #beginning of list
+	high = len(myList)-1 #end of list "-1" is needed or you can run into "index out of range" error
+	while low <= high: 
+		mid = (low + high)//2 #mid is the index of half way position in your list
+		if myList[mid]== myItem: #checks if the item is  located at middle index
+			return mid # exits the while loop and returns index of item
+		elif myList[mid] < myItem: 
+			low = mid + 1 # the mid object is less than the item, the new low becomes 1 index higher
 		else :
-			high = mid - 1
-	return found
+			high = mid - 1 #if mid is > item the high index bcomes the mid index minus 1
+	return -1 #returns -1 if object is not in the list
 
-List = sorted([67,78,9,67,53,24,23,87])
-Item = 7
-isitFound = bsearch(Item, List)
-if isitFound:
-	print List.index(Item)
-else:
-	print -1
+
+
+	
+
+
+
