@@ -81,3 +81,17 @@ def bsearchRecursive(L, S, Min, Max):
       else:
     	return -1
   
+#Xavier Ward
+def Bsearch(SuperList, searchElement): #Fixed
+	lowest = 0
+    	highest = len(SuperList) - 1
+    	mid = (lowest + highest) / 2
+    	while highest >= lowest:  
+        	if (searchElement >  SuperList[mid]):
+        		mid = mid + highest / 2
+        	elif searchElement < SuperList[mid]:
+        		mid = mid / 2
+      		elif searchElement == SuperList[mid]:
+        		return mid
+      		else:
+        		return -1
