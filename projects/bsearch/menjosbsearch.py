@@ -69,3 +69,20 @@ def bsearch(List, Element):
                         else:
                                 return -1
 #Elyon Olaniran Code ends here
+
+#Jahmaal Gayle starts here
+def bsearch (ages, targetAge, bottomIndexes=0, topIndexes=5):
+    if topIndexes is 5:
+        topIndexes = len(ages)
+    while bottomIndexes < topIndexes:
+        middleIndexes = (bottomIndexes+topIndexes)//2
+        middleNumber = ages[middleIndexes]
+        if middleNumber < targetAge:
+            bottomIndexes = middleNumber+1
+        elif middleNumber > targetAge:
+            topIndexes = middleIndexes
+        else:
+            return middleIndexes
+    return -1
+    
+#Jahmaal Gayle Code ends here    
