@@ -41,45 +41,25 @@ def bsearch(item, myList): #defines the function
 			return -1 # -1 will be returned if the item is not in the list at all
 
 #Jordan Marsaw 
-''' The function takes a (L)ist and a (S)earch element and then makes takes the highest value as the last possible 
-    index of the list (Remember that binary searches only work on lists that are sorted). The low value is at the 
-    first position of the list and mid will be the high and low positions halved. While the list isn't empty, and 
-    the mid and high values aren't the same, check to see if the (S)earch element is less than the element at the 
-    middle of the list - if the (S)earch element is less than the element at mid then the middle point is the half 
-    of the first part of the list, and the loop runs from the top again. Elif (S)earch element is greater than the 
-    element at the position then the mid is changed to the middle of the upper half. If the values are the same 
-    then just return the position in the list where the same values were found. When none of these conditions are 
-    satisfied, return -1 '''
-def BSearch(L, S):
-	high = len(L) - 1
-	low = 0
-	mid = (high + low) / 2
-	while mid < high and high >= 1 and high > low:
-		if S < L[mid]:
-     			mid = mid / 2
-    		elif S > L[mid]:
-      			mid = (mid + high) / 2
-    		elif S == L[mid]:
-      			return mid
-    		else:
-      			return -1
-   
-def bsearchRecursive(L, S, Min, Max):
-  ''' The function takes a (L)ist, a (S)earch element, the minimum value of the list, and the maximum value of the list. 
-      Mid is set at the halfway mark of the full list. If(S)earch element is less than the value at L[Mid] then the
-      function calls itself again with the same (L)ist, the same (S)earch element, the Min value is set to the lowest
-      value of the list (L[0]), and Max is set to the the value of the the halfway point and Mid is then changed to the 
-      middle point based on the new Min and Max declared when the function is called. '''
-      Mid = (Min + Max) / 2
-      while len(L) != 0
-      if S < L[Mid]:
-      	return bsearchRecursive(L, S, Min = L[0], Max = L[Mid - 1])
-      elif S > L[Mid]:
-    	return bsearchRecursive(L, S, Min = L[Mid + 1], Max = L[-1])
-      elif S == L[Mid]:
-    	return Mid
-      else:
-    	return -1
+def bsearch(L, i):
+    return bsearchRecursive(L, i, 0, len(L) - 1)
+
+
+def bsearchRecursive(L, i, Min, Max):
+	''' A recursive solution to binary search. Checks to make sure that list is not empty and if list has elements
+	    within the function creates the midpoint and searches through the sorted list for the (i)tem being searched
+	    for '''
+    if Max < Min:
+        return -1
+    else:
+        Mid = (Min + Max) / 2
+        if L[Mid] > i:
+            return bsearchRecursive(L, i, Min, Mid - 1)
+        elif L[Mid] < i:
+            return bsearchRecursive(L, i, Mid + 1, Max)
+        else:
+            return Mid
+
   
 #Xavier Ward
 def Bsearch(SuperList, searchElement): #Fixed
