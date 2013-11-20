@@ -25,20 +25,21 @@ def bsearch (element, alist):               #Defines the function bsearch for a 
 
 
 #Johnathan Curry
-def bsearch(item, myList): #defines the function
-	left = myList[0] #tells initially what the first half of the list will be (the first element)
-	right = myList[-1] #tells what the second half will be (the final element)
-	midpoint = (left + right) / 2 #establishes the value of the midpoint 
-	while found = False: #establishes the perameter of the loop. The loop will exit when found = true
-		if item < midpoint: #if the midpoint is less than the desired element...
-			midpoint = (left + midpoint) / 2 #the new midpoint will be half the first half of the list
-		elif item > midpoint: #if the midpoint is greater than the desired element...
-			midpoint = (right + midpoint) / 2 #the new midpoint will be half the second half of the list
-		elif item == midpoint: #if the midpoint is equal to the desired element...	
-			found =True #found will equal true when item is found, exiting the loop
-			return myList[item] #it will exit the loop and skip to the end
-		else: #if all else fails...
-			return -1 # -1 will be returned if the item is not in the list at all
+def bsearch(myList, item): #defines the function
+  midpoint = len(myList) / 2 #gives midpoint the value of half the length of the list
+  left = myList[0 : midpoint] #splits the list into two parts, the first from the begining to midpoint
+  right = myList[midpoint: len(myList) - 1] #the second from the midpoint to the end
+  while found is False: #the loop will continue until found is true
+    midpoint = len(myList) / 2 #redefines midpoint
+    if item < myList[midpoint]: #if item is less than the midpoint
+      myList[midpoint] = len(left) / 2 #midpoint is equal to half the length of the left side
+    elif item > myList[midpoint]: #if item is greater
+      myList[midpoint] = len(right) / 2 #midpoint is equal to half the lenght of the right side
+    elif item == myList[midpoint]: #when the midpoint is equal to the item
+      found is True #found becomes true
+      return myList[midpoint] #then exits the loop
+    elif item not in myList: #if the item is not in the list
+      return -1 #the loop exits and returns -1
 
 #Jordan Marsaw 
 def bsearch(L, i):
