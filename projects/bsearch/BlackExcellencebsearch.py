@@ -1,6 +1,12 @@
 Bsearch
 
-#David Blackstone 
+#Jacari Boboye
+#Malik HornBuckle
+#Isaiah Williams
+#Justin Austin
+#David Blackstone
+
+
 
 def bsearch(List, number):
 +	found = 0
