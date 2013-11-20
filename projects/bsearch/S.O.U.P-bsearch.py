@@ -77,7 +77,7 @@ def Bsearch(SuperList, searchElement): #Fixed
         		return -1
         		
 #Marcus Killebrew    
-def binarySearch(BCL , Points): #Resubmission
+def binarySearch(BCL , Points): #Final Code
 	low = 0 
 	high = len(BCL) - 1
 	while low <= high:
@@ -85,12 +85,13 @@ def binarySearch(BCL , Points): #Resubmission
         if BCL[middle] < Points:
         	low =middle + 1
         if BCL[middle]== Points:
-                middle= middle/2
+        	return middle
         elif Points <BCL[middle]:
-            high = middle - 1
-            return middle
-            else:
-            return -1
+        	high = middle - 1
+        else:
+        	return middle
+        	return -1
+       
 
         		
         		
