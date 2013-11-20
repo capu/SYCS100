@@ -1,5 +1,4 @@
 
-
 def bsearch(list,searchvalue):
     
     low=0
@@ -35,3 +34,18 @@ def bsearch(numbers,value):
             return mid
     return -1
 
+#Abiy Getaneh
+#@02474254
+def bsearch(List,item):#defines the function for binary search of an item in a list
+    bottom = 0 #index of the first element in the list
+    top = len(List)-1#index of the last element in the list
+    while bottom <= top: #checks if bottom is less or equal to top
+        mid=(bottom+top)/2#assigns the index of the middle element in the list to mid
+        if List[mid]==item:#compairs if the value of the mid element is equal to the search item
+            return mid #returns the index of the mid element
+        elif List[mid]>item:#compairs if the value of the mid element is greater than the search item
+            top=mid-1   #assigns the index of the element preceding the mid to top   
+        else:#compairs if the value of the mid element is less than the search item
+            bottom=mid+1 #assigns the index of the element succeeding the mid to bottom
+    else:
+        return -1 #returns -1 if the search item is not found
