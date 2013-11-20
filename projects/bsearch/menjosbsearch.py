@@ -86,3 +86,25 @@ def bsearch (ages, targetAge, bottomIndexes=0, topIndexes=5):
     return -1
     
 #Jahmaal Gayle Code ends here    
+
+
+# Nolan English Code starts here
+
+def bsearch(a,d,high = -1, low = 0, x = 1):
+    try:
+        a.sort()
+        if x == 1:
+            high = len(a) - 1   
+        mid = (high + low) / 2
+        if d == a[mid]:
+            return mid
+        elif d > a[mid]:
+            low = (mid) + 1
+            return bsearch(a,d,high,low,0)
+        elif d < a[mid]:
+            high = (mid) - 1
+            return bsearch(a,d,high,low,0)
+    except (RuntimeError, IndexError):
+        return -1
+        
+# Nolan English code ends here
