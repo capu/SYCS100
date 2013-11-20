@@ -222,3 +222,30 @@ def  bsearch(ist, item):
             return -1
 
 # Jabari's Code
+def bsearch(list,item):
+    
+      top =  len(list)-1
+      
+      bottom = 0
+      
+      found = False
+      
+      while found == False:
+          
+          search = (top+bottom)/2
+          
+          if item > list[search]:
+              
+             bottom = search + 1
+             
+        
+          elif item < list[search]:
+              
+              top = search -1
+          if item not in list:
+              return -1  
+            
+              
+          elif item == list[search]:
+    
+              return search
