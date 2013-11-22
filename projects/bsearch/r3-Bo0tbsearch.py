@@ -13,7 +13,7 @@ def bitSearch(listA, s): #defines the function of bitsearch for a given listA an
     startingPara = 0 #sets the starting parameter at 0
     endingPara = len(listA) - 1 #sets the ending parameter to be the length of the list minus 1, for the purposes of indexing
     search = s #defines search as s
-    while ((endingPara >= startingPara + 1) and extant == False): #will run the function until the ending para is less than the starting para + 1 and extant = False
+    while ((endingPara >= startingPara) and extant == False): #will run the function until the ending para is less than the starting para + 1 and extant = False
         midpoint = ((startingPara + endingPara) / 2) #the midpoint will be the exact middle between the starting and ending para's sum. Floor division would skew this process
         if search < listA[midpoint]: #checks and sees if the search value is greater than the index of listA midpoint
             endingPara = midpoint - 1 #if so, the ending para will become 1 less than the midpoint
