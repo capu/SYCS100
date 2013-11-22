@@ -40,7 +40,28 @@ def bsearch(myList, myItem):
 			high = mid - 1 #if mid is > item the high index bcomes the mid index minus 1
 	return -1 #returns -1 if object is not in the list
 
-
+#Dontrell Knighten @02671846
+def bsearch(array, x): #function for binary search
+    first = 0 #first element in list
+    last = len(array) - 1 #last element in list
+    midpoint = (first + last) / 2 # middle of list
+    searching = (first <= last) #boolean value to check where in list you are
+    found = False #boolean varialbe to see if item is found or not
+    while(searching and not found): #while still searching and item is not found
+     midpoint = (first + last) / 2 #middle of list 
+     if(x == array[midpoint]): #if value entered is same as value looking for 
+        found = True #found is true
+        return midpoint #return index of element
+     elif( x < array[midpoint]): #else if value is less than midpoint check bottom half of list
+        last = midpoint - 1 #set last value equal to the midpoint - 1 
+        searching = (first <= last) #still searching
+        found = False #item not found 
+     else: #else value is in upper half of list
+        first = midpoint + 1 #set first value equal to midpoint + 1
+        searching = (first <= last) #still searching 
+        found = False #item not found
+    if(found == False): #if after all searches item not found 
+        return -1 #return - 1
 
 	
 
