@@ -47,3 +47,19 @@ def binary_search(a, x, small=0, big=None):
         else:
             return mid
     return -1
+
+#Jacari Boboye
+
+def binarySearch(myItem,myList):
+        found=False
+        bottom=0
+        top=len(myList)-1
+        while bottom<=top and not found:
+                middle = (bottom+top)//2
+                if myList[middle]==myItem:
+                        found =True
+                elif myList[middle]< myItem:
+                        bottom=middle +1
+                else:
+                        top=middle-1
+        return found
