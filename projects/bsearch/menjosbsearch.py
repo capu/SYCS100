@@ -108,3 +108,34 @@ def bsearch(a,d,high = -1, low = 0, x = 1):
         return -1
         
 # Nolan English code ends here
+#Oreoluwa Onatemowo's code starts here
+def bsearch(searchlist,searchElement):       
+    searchlist.sort()
+    length = len(searchlist)
+    initial_index=0
+    final_index = len(searchlist)-1
+    midpoint = (initial_index + final_index)/2
+    if searchlist ==[]:
+        return -1
+    if searchlist[midpoint] == searchElement:
+        return midpoint
+        pass
+    while searchlist[midpoint]!=searchElement:
+        if searchlist[midpoint]  < searchElement:
+            initial_index = midpoint+1
+            midpoint = (initial_index+final_index)/2
+            length = midpoint - initial_index                  
+        elif searchlist[midpoint] > searchElement:            
+            final_index = midpoint-1
+            midpoint=(initial_index+final_index)/2 
+            length = midpoint - initial_index          
+        if searchlist[midpoint] == searchElement:                
+                return midpoint
+        if initial_index>final_index:
+                break    
+    return -1
+
+
+#Oreoluwa Onatemowo's code ends here
+
+
