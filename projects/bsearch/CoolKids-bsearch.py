@@ -67,4 +67,21 @@ def bsearch(array, x): #function for binary search
 	
 
 
+#Oluwatoorese S Lasebikan
+#@02720942
+#SYCS group assignment
+#Binary Search assignment
+
+def bsearch (myList, myItem):
+    start = 0
+    end = len(myList) - 1
+    while start <= end:
+        mid = (start + end)/2
+    if mid == myItem:
+        return mid
+    elif x < mid:
+        end = mid - 1
+    else:
+        start = mid + 1
+    return -1
 
