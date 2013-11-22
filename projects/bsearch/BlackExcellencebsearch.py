@@ -63,3 +63,27 @@ def binarySearch(myItem,myList):
                 else:
                         top=middle-1
         return found
+
+# Kalen Collins
+
+def bsearch(List, searchFor):
+
+      high = len(List)-1 
+      low = 0 
+          
+      while low <= high:
+         
+         if len(List) == 0: 
+            return "Empty List"
+         
+         mid = (high + low)//2 
+         
+         if List[mid] < searchFor: 
+            low = mid + 1
+            
+         elif List[mid] > searchFor: 
+            high = mid - 1
+            
+         else:
+            return mid 
+         
