@@ -97,8 +97,7 @@ def bsearch(list, b): # Function takes the parameters list and 'b' (the object t
            search = search[:i+1]
    else: #if it gets through the entire list and didn't find anything, then you can have a -1
      return -1
-     
-bsearch(list,b)
+
 
 '''Barry's Binary Search Function '''
 def bsearch(l, s):
