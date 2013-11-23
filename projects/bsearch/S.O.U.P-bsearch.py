@@ -25,21 +25,24 @@ def bsearch (element, alist):               #Defines the function bsearch for a 
 
 
 #Johnathan Curry
-def bsearch(myList, item): #defines the function
-  midpoint = len(myList) / 2 #gives midpoint the value of half the length of the list
-  left = myList[0 : midpoint] #splits the list into two parts, the first from the begining to midpoint
-  right = myList[midpoint: len(myList) - 1] #the second from the midpoint to the end
-  while found is False: #the loop will continue until found is true
-    midpoint = len(myList) / 2 #redefines midpoint
-    if item < myList[midpoint]: #if item is less than the midpoint
-      myList[midpoint] = len(left) / 2 #midpoint is equal to half the length of the left side
-    elif item > myList[midpoint]: #if item is greater
-      myList[midpoint] = len(right) / 2 #midpoint is equal to half the lenght of the right side
-    elif item == myList[midpoint]: #when the midpoint is equal to the item
-      found is True #found becomes true
-      return myList[midpoint] #then exits the loop
-    elif item not in myList: #if the item is not in the list
-      return -1 #the loop exits and returns -1
+#I now know that my original submissions were too complicated. I'm a little ashamed it took me this long.
+
+def bsearch(myList, item): #defines the function w/ the perameters
+	left = myList[0]   #the lower side of the list is the first element
+	right = myList[-1]  #the higher side is the last element 
+	midpoint = (left + right) / 2  #the middle of the list is the average of the left and right side
+	found = False  #sets up the perameter for the while loop
+	while found is False: # I found this is the easiest perameter for the loop, which will continue until the return function
+		if item == myList[midpoint]:  #at the start of each iteration, if the item is the same as the midpoint... 
+			return myList[midpoint]  #the loop immediatly terminates
+		elif item > myList[midpoint]:  #if the item is in the right side of the list...
+			midpoint = (midpoint + right) / 2  #the new midpoint is the midpoint of the right side of the list
+		elif item < myList[midpoint]:  #shoud the item be in the left side of the list...
+			midpoint = midpoint / 2  #the new midpoint is the midpoint of the left side
+		else:  #should all else fail...
+			return -1  #the loop will terminate and -1 will be shown
+
+
 
 #Jordan Marsaw 
 def bsearch(L, i):
